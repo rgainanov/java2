@@ -12,12 +12,14 @@ public class MainApp {
         phoneBook.add("Gainanov", "+3716231449");
         phoneBook.add("gainanov", "+3726231441");
         phoneBook.add("GAINANOV", "+19806231443");
+        phoneBook.add("GAINANOV", "+19806231443");
         phoneBook.add("Ivanov", "+442345567634");
         phoneBook.add("Sazonov", "+37126178749");
         phoneBook.add("Sazonov", "+37223456872");
         phoneBook.add("Tszu", "+190992345678");
 
-        phoneBook.get("GAINANOV");
+//        phoneBook.printRecords();
+        phoneBook.get("gainanov");
     }
 
     public static void taskOne() {

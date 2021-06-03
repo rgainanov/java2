@@ -3,10 +3,10 @@ package ru.geekbrains.gainanov.homework.lesson3;
 import java.util.*;
 
 public class PhoneBook {
-    private TreeMap<String, ArrayList<String>> phoneDirectory = new TreeMap<String, ArrayList<String>>();
+    private TreeMap<String, HashSet<String>> phoneDirectory = new TreeMap<String, HashSet<String>>();
 
     public void add(String surname, String phoneNumber) {
-        ArrayList<String> temp = new ArrayList<>();
+        HashSet<String> temp = new HashSet<>();
         surname = surname.toLowerCase();
         if(phoneDirectory.containsKey(surname)) {
             temp = phoneDirectory.get(surname);
@@ -17,13 +17,13 @@ public class PhoneBook {
     }
 
     public void printRecords() {
-        for(Map.Entry<String, ArrayList<String>> o: phoneDirectory.entrySet()) {
+        for(Map.Entry<String, HashSet<String>> o: phoneDirectory.entrySet()) {
             System.out.println(o.getKey() + " : " + o.getValue());
         }
     }
 
     public void get(String surname) {
-        ArrayList<String> temp;
+        HashSet<String> temp;
         surname = surname.toLowerCase();
 
         if(phoneDirectory.containsKey(surname)) {
